@@ -1,0 +1,556 @@
+@import "fancy/jquery.fancybox.css"
+@import "../fonts/fonts.css"
+
+.clearfix, .container
+  +clr
+
+// Fonts variables
+
+$palem-nm: 'Conv_Palem-nm'
+$palem-it: 'Conv_Palem-it'
+$palem-bi: 'Conv_Palem-bi'
+$palem-bd: 'Conv_Palem-bd'
+
+
+.btn
+  display: inline-block
+  text-decoration: none
+  color: #ffffff
+  +transition(all .2s)
+
+  &.red
+    +border-radius(16px) // border radius
+    background-color: #b7596f // layer fill content + color overlay
+    +box-shadow(0 2px 0 #9b3a50) // drop shadow
+    padding: 9px 25px
+    font-size: 18px
+    font-family: $palem-nm
+    line-height: 1
+
+    &:hover
+      background-color: #c1667b // layer fill content + color overlay
+      +box-shadow(0 2px 0 #9b3a50) // drop
+
+    &:active
+      +box-shadow(none)
+
+  &.blue
+    +border-radius(26px)
+    background-color: #27b9dd // layer fill content + color overlay
+    @include box-shadow(0 4px 0 rgba(14,144,177,.75)) // drop shadow
+    font-size: 22px
+    font-family: $palem-nm
+    text-transform: uppercase
+    color: #ffffff
+    padding-top: 3px
+    +transition(all .2s)
+
+    &:hover
+      background-color: #3bc2e5
+
+    &:active
+      +box-shadow(none)
+
+header
+  .top-b
+    background: #333333
+    text-align: center
+    padding: 10px 0
+
+    ul
+      display: inline-block
+      +clr
+
+      li
+        float: left
+        border-right: 1px #494949 solid
+        position: relative
+        padding: 0 30px
+
+        &:last-child
+          border: none
+
+        &.is-active
+          &:after
+            content: ''
+            display: inline-block
+            position: absolute
+            bottom: -14px
+            background: url("../img/menu-triangle.png") no-repeat
+            width: 19px
+            height: 7px
+            left: 50%
+            margin-left: -9px
+
+        a
+          color: #ffffff
+          font-family: $palem-nm
+          text-transform: uppercase
+          text-decoration: none
+
+.logo-tel-b
+  position: relative
+  padding: 30px 0
+
+  &:after
+    content: ''
+    display: inline-block
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -12px
+    background: url("../img/logo-tel-shadow.png") repeat-x
+    height: 12px
+
+  .logo
+    float: left
+    margin-top: -8px
+
+  .tel-b
+    float: right
+    +clr
+
+    h2
+      float: left
+      font-family: $palem-nm
+      text-transform: uppercase
+      font-size: 31px
+      font-weight: normal
+      margin-top: 7px
+
+    .btn
+      float: right
+      margin-left: 25px
+
+.title-b
+  text-align: center
+
+  h3
+    font-family: $palem-nm
+    text-transform: uppercase
+    font-size: 20px
+    font-weight: normal
+
+h2.title
+  color: #333 // text color
+  font-family: $palem-nm
+  font-weight: normal
+  font-size: 50px
+  text-transform: uppercase
+
+
+.consist
+  padding-top: 80px
+
+  .consist-title
+    color: #b7596f // text color
+    font-family: $palem-nm
+    font-size: 29px
+    text-transform: uppercase
+    text-align: center
+    position: relative
+    margin-top: 70px
+    
+    &:after
+      content: ''
+      height: 3px
+      background: #b7596f
+      position: absolute
+      display: inline-block
+      left: 0
+      right: 0
+      top: 10px
+
+    span
+      background: #fff
+      padding: 0 20px
+      position: relative
+      z-index: 1
+
+      
+
+
+  .descr
+    width: 100%
+    position: relative
+
+    .bg
+      background: url("../img/section-consist-bg.png") no-repeat
+      height: 692px
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 2
+
+    .descr-items
+      float: left
+      width: 700px
+      position: relative
+      z-index: 3
+      margin-top: 95px
+
+      .descr-item
+        float: left
+        width: 340px
+        margin-top: -105px
+
+        +clr
+
+        img
+          float: left
+          margin-left: -50px
+
+        p
+          float: left
+          margin-left: -50px
+          margin-top: 100px
+          font-size: 18px
+          text-transform: uppercase
+          font-family: $palem-nm
+
+    .hand
+      float: right
+      margin-right: -60px
+      position: absolute
+      bottom: 0
+      z-index: 1
+
+.pink-form-b
+  background: url("../img/pink-form-b.jpg") top center repeat-x
+  height: 490px
+  text-align: center
+  color: #ffffff
+  padding-top: 50px
+
+  h2
+    font-size: 38px
+    font-family: $palem-nm
+    text-transform: uppercase
+    font-weight: normal
+
+  h3.price
+    font-size: 43px
+    font-family: $palem-bd
+    font-weight: normal
+    margin-top: 20px
+
+    &:after
+      content: ''
+      display: inline-block
+      background: url("../img/rouble.png") no-repeat
+      width: 28px
+      height: 28px
+      margin-left: 10px
+
+
+  input
+    width: 337px
+    height: 51px
+    @include border-radius(2px) // border radius
+    background-color: #fff // layer fill content + color overlay
+    font-size: 22px
+    font-family: $palem-nm
+    padding-left: 20px
+    margin-right: 18px
+
+  button
+    width: 240px
+    height: 52px
+    padding-top: 3px
+
+  .counter
+    margin-top: 20px
+
+    h5
+      font-size: 17px
+      color: #ffffff
+      font-family: $palem-bd
+      text-transform: uppercase
+      font-weight: normal
+      margin-bottom: 20px
+
+      &:after
+        content: ''
+        width: 303px
+        height: 1px
+        @include opacity(.24) // layer alpha
+        background-color: #fff // layer fill content + color overlay
+        display: inline-block
+        float: right
+        margin-top: 5px
+
+      &:before
+        content: ''
+        width: 303px
+        height: 1px
+        @include opacity(.24) // layer alpha
+        background-color: #fff // layer fill content + color overlay
+        float: left
+        margin-top: 5px
+
+    .counter-items
+      .counter-item
+        display: inline-block
+        margin: 0 5px
+
+        span
+          background: url("../img/counter-bg.png") no-repeat
+          width: 52px
+          height: 54px
+          display: inline-block
+          color: #000000
+          font-size: 30px
+          font-family: $palem-bd
+          padding-top: 15px
+          
+        p
+          font-size: 17px
+          font-family: $palem-nm
+          text-transform: lowercase
+
+  form
+    margin-top: 25px
+
+.descr
+  h4
+    text-align: center
+    font-size: 25px
+    font-family: $palem-nm
+    font-weight: normal
+    margin-top: 30px
+
+  .content
+    position: relative
+    +clr
+
+    .left-b
+      position: absolute
+      margin-left: -120px
+
+    .right-b
+      float: right
+      position: relative
+      margin-top: 75px
+      width: 60%
+      
+      p
+        font-size: 17px
+        color: #272727
+        font-family: $palem-nm
+        line-height: 32px
+
+      .rev-b
+        +clr
+        margin-left: -30px
+        margin-top: 50px
+
+        img
+          float: left
+          +border-radius(50%)
+          margin-right: 25px
+
+        p
+          float: left
+          font-size: 21px
+          width: 77%
+          
+.use
+  background: url("../img/section-use/bg.jpg") no-repeat
+  +background-size(cover)
+  text-align: center
+  margin: 95px 0
+  padding: 85px 0
+
+  h2.title
+    margin-bottom: 50px
+
+  i
+    display: inline-block
+    background: url("../img/section-use/icon-bg.png") no-repeat
+    width: 64px
+    height: 77px
+    font-size: 48px
+    color: #ffffff
+    font-family: $palem-nm
+    font-style: normal
+    padding-top: 15px
+
+  .use-item
+    margin-bottom: 50px
+
+  p
+    color: #272727 // text color
+    font-family: $palem-nm
+    font-size: 21px
+    line-height: 30px
+    margin-top: 10px
+
+  .descr
+    &:before
+      content: ''
+      width: 138px
+      height: 5px
+      background-color: #b75981 // layer fill content + color overlay
+      display: inline-block
+      margin-bottom: 10px
+
+.video
+  text-align: center
+
+  h2.title
+    margin-bottom: 50px
+
+
+.how-we-work
+  margin-top: 100px
+  text-align: center
+
+  .how-we-work-items
+    display: inline-block
+    margin: 70px 0
+    +clr
+
+    .how-we-work-item
+      float: left
+      width: 220px
+      margin: 0 10px
+      
+      p
+        font-size: 21px
+        font-family: $palem-nm
+
+.reviews
+  text-align: center
+  margin-top: 40px
+  margin-bottom: 80px
+
+  &+.title-b
+    margin-bottom: 50px
+
+  .title
+    margin-bottom: 80px
+
+  .reviews-items
+    margin-bottom: 60px
+    +clr
+
+    .reviews-item
+      float: left
+      width: 50%
+      
+      &:first-child
+        border-right: 1px #eaeaea solid
+
+      .text
+        margin: 0 45px
+        font-size: 21px
+        background: url("../img/reviews/quote.jpg") center top no-repeat
+        padding-top: 70px
+        margin-top: 25px
+
+        p
+          font-family: $palem-nm
+          
+        strong
+          font-weight: normal
+          font-family: $palem-bd
+
+  .btns
+    display: inline-block
+
+    .btn.blue
+      padding: 14px 40px 10px
+      text-transform: capitalize
+      font-size: 22px
+      font-family: $palem-nm
+
+    .add-rev
+      margin-top: 30px
+      font-family: $palem-nm
+      font-size: 22px
+      border-bottom: 1px black dotted
+      text-decoration: none
+      color: #000000
+      line-height: 1
+      display: inline-block
+
+.other
+  text-align: center
+
+  .other-items
+    margin-top: 50px
+    display: inline-block
+    +clr
+
+    .other-item
+      float: left
+      width: 289px
+      height: 583px
+      border: 4px solid #ececec
+      margin: 0 20px
+
+      .img
+        height: 180px
+        margin-top: 40px
+
+      .descr
+        font-family: $palem-nm
+        margin-bottom: 25px
+        margin-top: 20px
+
+        p
+          font-size: 23px
+
+        span
+          font-size: 18px
+          color: #666666
+
+        .price
+          font-size: 29px
+          color: #181818
+          margin-top: 20px
+
+      &:first-child
+        margin: 0
+
+      &:last-child
+        margin: 0
+
+      input
+        width: 222px
+        height: 45px
+        border: 1px solid rgba(204,204,204,.59) // stroke
+        @include border-radius(3px / 4px 4px 4px 4px) // border radius
+        @include background-clip(padding-box) // prevents bg color from leaking outside the border
+        background-color: #77b3ff // layer fill content
+        @include background-image(linear-gradient(bottom, #fff 0%, #fff 99.22%, #fff 100%)) // color overlay + gradient overlay
+        margin-bottom: 10px
+        padding-left: 10px
+        color: #999 // text color
+        font-family: $palem-nm
+        line-height: 1
+        font-size: 18px
+
+
+      button
+        width: 223px
+        height: 46px
+        @include border-radius(25px) // border radius
+        background-color: #b7596f // layer fill content + color overlay
+        @include box-shadow(0 3px 0 rgba(155,58,81,.89)) // drop shadow
+        font-size: 23px
+        text-transform: uppercase
+        font-family: $palem-nm
+        color: #ffffff
+        margin-top: 20px
+        padding-top: 3px
+
+
+footer
+  @extend .logo-tel-b
+  margin-top: 70px
+
+  &:after
+    bottom: 0
+    top: -12px
