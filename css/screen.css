@@ -74,7 +74,7 @@ header .top-b ul, header .top-b-scroll ul { display: inline-block; *zoom: 1; }
 header .top-b ul:after, header .top-b-scroll ul:after { content: " "; display: table; clear: both; }
 header .top-b ul li, header .top-b-scroll ul li { float: left; border-right: 1px #494949 solid; position: relative; padding: 0 30px; }
 header .top-b ul li:last-child, header .top-b-scroll ul li:last-child { border: none; }
-header .top-b ul li.is-active:after, header .top-b-scroll ul li.is-active:after { content: ""; display: block; position: absolute; bottom: -15px; background: url("../img/menu-triangle.png") no-repeat; width: 19px; height: 7px; left: 50%; margin-left: -9px; }
+header .top-b ul li.is-active:after, header .top-b-scroll ul li.is-active:after { content: ""; display: block; position: absolute; bottom: -17px; background: url("../img/menu-triangle.png") no-repeat; width: 19px; height: 7px; left: 50%; margin-left: -9px; }
 header .top-b ul li a, header .top-b-scroll ul li a { color: white; font-family: "Conv_Palem-nm"; text-transform: uppercase; text-decoration: none; }
 header .top-b-scroll { display: none; }
 header .top-b-scroll.open { position: fixed; z-index: 99; top: 0; left: 0; right: 0; }
